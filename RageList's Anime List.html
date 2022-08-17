@@ -1556,7 +1556,7 @@ body::before {
 
 /* Adjusts list to size correctly with banner. See BANNER for its sizing rules. */
 
-@media (min-width: 1920px) {
+@media screen and (min-width: 1920px) {
 	.list-block {
 		min-height: calc(100vh - (164px + (1920px * 0.3)));
 	}
@@ -2344,14 +2344,14 @@ body::before {
 	content: "No entries found. Perhaps your search terms are too restrictive?";
 }
 
-@media (min-width: 1150.5px) {
+@media screen and (min-width: 1150.5px) {
 	.list-table[data-items="[]"]::before {
 		--items: 5;
 		--offset: 20%;
 	}
 }
 
-@media (min-width: 1597.5px) {
+@media screen and  (min-width: 1597.5px) {
 	.list-table[data-items="[]"]::before {
 		--items: 7;
 		--offset: 25%;
@@ -3544,7 +3544,7 @@ div[style^="width: 300px;"] input {
 	font-family: var(--font);
 }
 
-@media (min-width: 1600px) {
+@media screen and  (min-width: 1600px) {
 	#advanced-options {
 		--pad: 1600px;
 	}
@@ -3773,7 +3773,7 @@ div[style^="width: 300px;"] input {
 /* This section:
  * - Moves and resizes many elements to display better on small lists.
  */
-@media (max-width: 926px) {
+@media screen and (max-width: 926px) {
 	.list-block {
 		min-height: calc(100vh - (164px + (700px * 0.3)));
 		padding-top: 44px;
@@ -3851,37 +3851,37 @@ div[style^="width: 300px;"] input {
  *   listW formula: 223.5px (list item) * # (columns) + 16px (extra spacing)
  */
  
-@media (min-width: 0px) {
+@media screen and  (min-width: 0px) {
 	:root {
 		/*3*/
 		--listW: 686.5px;
 	}
 }
-@media (min-width: 927px) {
+@media screen and  (min-width: 927px) {
 	:root {
 		/*4*/
 		--listW: 910px;
 	}
 }
-@media (min-width: 1150.5px) {
+@media screen and  (min-width: 1150.5px) {
 	:root {
 		/*5*/
 		--listW: 1133.5px;
 	}
 }
-@media (min-width: 1374px) {
+@media screen and  (min-width: 1374px) {
 	:root {
 		/*6*/
 		--listW: 1357px;
 	}
 }
-@media (min-width: 1597.5px) {
+@media screen and  (min-width: 1597.5px) {
 	:root {
 		/*7*/
 		--listW: 1580.5px;
 	}
 }
-@media (min-width: 1821px) {
+@media screen and (min-width: 1821px) {
 	:root {
 		/*8*/
 		--listW: 1804px;
