@@ -102,17 +102,17 @@
 	 * min value: 0% / max value: 100%
 	 */
 	
-	--toggleStats: hidden;
+	--toggleStats: visible;
 	--toggleStreaming: visible;
 	--toggleTopRatingGold: visible;
 	--toggleTopRatingSilver: visible;
-	--toggleTopRatingBronze: hidden;
+	--toggleTopRatingBronze: visible;
 	--bgDimness: 50%;
 	--bannerVignetteOpacity: 90%;
-	--imageBrightness: 66%;
-	--imageBrightnessHov: 35%;
-	--imageBlurHov: 2px;
-	--infoBGOpacity: 85%;
+	--imageBrightness: 80%;
+	--imageBrightnessHov: 45%;
+	--imageBlurHov: 0px;
+	--infoBGOpacity: 75%;
 	
 	/* THEME COLOURS
 	 * 
@@ -395,24 +395,6 @@ body::before {
 }
 
 /* Adjusts list to size correctly with banner. See BANNER for its sizing rules. */
-
-@media screen and (min-width: 0px) {
-	.list-block {
-		min-height: calc(100vh - (188px + (480px * 0.4)));
-	}
-}
-
-.list-unit {
-	width: 100%;
-}
-
-.list-table {
-	display: flex;
-	width: calc(var(--listW) - 32px);
-	border: none;
-	flex-flow: row wrap;
-	justify-content: center;
-}
 
 @media screen and (max-width: 1920px) {
 	.list-block {
