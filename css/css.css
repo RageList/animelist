@@ -1,3 +1,4 @@
+
 /* "Brink" by Valerio Lyndon
  * Version 1.8.1
  * 
@@ -107,13 +108,14 @@
 	--toggleTopRatingGold: visible;
 	--toggleTopRatingSilver: visible;
 	--toggleTopRatingBronze: hidden;
-	--bgDimness: 50%;
+	--bgDimness: 0%;
 	--bannerVignetteOpacity: 90%;
-	--imageBrightness: 80%;
-	--imageBrightnessHov: 90%;
-	--imageBlurHov: 0.5px;
+	--imageBrightness: 70%;
+	--imageBrightnessHov: 80%;
 	--infoBGOpacity: 75%;
-	
+	--imageBlurHov: px;
+
+
 	/* THEME COLOURS
 	 * 
 	 * Colours are HSL values but without their surrounding parentheses.
@@ -180,86 +182,10 @@
 	--arrowRt: url(https://files.catbox.moe/lqi5fy.svg);
 	--arrowDn: url(https://files.catbox.moe/m9ot24.svg);
 	--arrowLt: url(https://files.catbox.moe/68o5bn.svg);
+
 }
 
-/*==============================*\
-  !PAGE-BASE @Scrollbars
-\*------------------------------*/
 
-/* Firefox */
-
-* {
-	scrollbar-color: hsl(var(--accent)) hsl(var(--bgAlt));
-}
-
-.list-item * {
-	scrollbar-color: hsl(var(--accent)) hsl(var(--bg));
-}
-
-.data.tags, textarea {
-	scrollbar-width: thin;
-}
-
-/* Chrome */
-
-*::-webkit-scrollbar {
-	background: hsl(var(--bgAlt));
-}
-
-*::-webkit-scrollbar-button:vertical {
-	background: center / 10px auto no-repeat transparent;
-} *::-webkit-scrollbar-button:vertical:start {
-	background-image: var(--arrowUp);
-} *::-webkit-scrollbar-button:vertical:end {
-	background-image: var(--arrowDn);
-} *::-webkit-scrollbar-button:horizontal {
-	background: center / auto 10px no-repeat transparent;
-} *::-webkit-scrollbar-button:horizontal:start {
-	background-image: var(--arrowLt);
-} *::-webkit-scrollbar-button:horizontal:end {
-	background-image: var(--arrowRt);
-}
-
-*::-webkit-scrollbar-corner {
-	background: hsl(var(--bgAlt));
-}
-
-*::-webkit-scrollbar-thumb {
-	background: hsl(var(--accent)) content-box;
-	border: 0 solid transparent;
-} *::-webkit-scrollbar-thumb:vertical {
-	border-width: 0 2px;
-} *::-webkit-scrollbar-thumb:horizontal {
-	border-width: 2px 0;
-} *::-webkit-scrollbar-thumb:hover {
-	background-color: hsla(var(--accent), 70%);
-} 
-
-*::-webkit-scrollbar-track {
-	width: 5px;
-}
-
-.list-item *::-webkit-scrollbar {
-	background: hsl(var(--bg));
-}
-
-.data.tags::-webkit-scrollbar,
-textarea::-webkit-scrollbar {
-	width: 8px;
-}
-
-.data.tags::-webkit-scrollbar-button,
-textarea::-webkit-scrollbar-button {
-	display: none;
-}
-
-.data.tags::-webkit-scrollbar-thumb:vertical,
-textarea::-webkit-scrollbar-thumb:vertical {
-	border-width: 0 1px;
-} .data.tags::-webkit-scrollbar-thumb:horizontal,
-textarea::-webkit-scrollbar-thumb:horizontal {
-	border-width: 1px 0;
-}
 
 /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~*\
   @Generic
@@ -395,11 +321,10 @@ body::before {
 /* Adjusts list to size correctly with banner. See BANNER for its sizing rules. */
 
 
-@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+@media all and (min-width: 1920px) and (min-width: 320px) {
 	.list-block {
-        max-height: calc(100vh - (164 + (699px * 0.3)));
-		min-height: calc(100vh - (164px + (520px * 0.3)));
-        min-height: calc(100vh - (164px + (1151px * 0.3)));
+		min-height: calc(100vh - (164px + (1920px * 0.3)));
+        min-height: calc(100vh - (164px + (320px * 0.3)));
 	}
 }
 
@@ -437,6 +362,8 @@ body::before {
 	background: hsl(var(--bgAlt));
 	box-shadow: 0 1.68px 3.36px hsla(0, 0%, 0%, 50%);
 }
+
+
 
 /* Left Area */
 
@@ -566,6 +493,12 @@ body::before {
 	display: none;
 }
 
+@media only screen and (max-width: 320px) {
+	.hedaer .header-info .header-menu .header-title .header-title.days .header-title.image .header-title.number .header-title.status
+    .header-title.tags .header-title:focus .header-title:hover {
+        max-height: calc(100vh - (164px + (320px * 0.3)));
+	}
+}
 
 /*==============================*\
   !USER-MENU
@@ -2561,7 +2494,7 @@ div[style^="width: 300px;"] input {
 \*------------------------------*/
 
 #footer-block {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	
@@ -2849,6 +2782,9 @@ div[style^="width: 300px;"] input {
 	}
 }
 
+#my{
+	zoom: 100%;
+	}
 
 /*==============================*\
   !MODS
