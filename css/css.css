@@ -168,7 +168,7 @@
 	--timeButtonLarge: 260ms;
 	--timeItem: 120ms;
 	--timeMenu: 350ms;
-	--bezierFast: cubic-bezier(.38,.32,.25,1);
+	--bezierFast: cub   ic-bezier(.38,.32,.25,1);
 	--bezierSmooth: cubic-bezier(.45,.32,.25,1);
 	--bezierItemBounce: cubic-bezier(.6,.48,.7,1.45);
 	--delayMenu: 333.4ms;
@@ -318,13 +318,13 @@ body::before {
 /* Adjusts list to size correctly with banner. See BANNER for its sizing rules. */
 
 
-@media all and (min-width: 720px) and (max-width: 1920px) {
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
 	.list-block {
-        min-height: calc(100vh - (164 + (720px * 0.3)));
-		max-height: calc(100vh - (164px + (1920px * 0.3)));
+        max-height: calc(100vh - (164 + (699px * 0.3)));
+		min-height: calc(100vh - (164px + (520px * 0.3)));
+        min-height: calc(100vh - (164px + (1151px * 0.3)));
 	}
 }
-
 
 .list-unit {
 	width: 100%;   
@@ -379,6 +379,7 @@ body::before {
 .header .header-title:focus {
 	opacity: 0.6;
 }
+
 
 /* Right Area */
 
