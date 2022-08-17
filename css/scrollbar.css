@@ -1,8 +1,8 @@
 /* Scrollbar size */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    transition: 1.0s;
+    width: 25px;
+    height: 25px;
+    transition: 2.0s;
 }
 
 ::-webkit-scrollbar-thumb {
